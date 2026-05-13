@@ -1,0 +1,24 @@
+ALGORITMO: Procesamiento de una Neurona
+INICIO
+
+    // 1. Definir los datos (Reserva de memoria RAM)
+    ENTRADAS: x1, x2, x3...
+    PESOS: w1, w2, w3... (representan la importancia de cada entrada)
+    SESGO (Bias): b (un ajuste extra para que la neurona sea flexible)
+    SUMA_TOTAL: 0
+
+    // 2. Lógica de integración (El "corazón" matemático)
+    POR CADA entrada (xi) Y peso (wi):
+        SUMA_TOTAL = SUMA_TOTAL + (xi * wi)
+    
+    // Sumamos el sesgo al final
+    SUMA_TOTAL = SUMA_TOTAL + b
+
+    // 3. Función de Activación (La toma de decisión)
+    SI SUMA_TOTAL > 0 ENTONCES:
+        RESULTADO = 1  (La neurona se activa / "Dispara")
+    SINO:
+        RESULTADO = 0  (La neurona se queda apagada)
+
+    MOSTRAR RESULTADO
+FIN
